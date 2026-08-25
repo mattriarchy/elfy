@@ -1,0 +1,20 @@
+[package]
+name = "elfy"
+version = "0.1.0"
+edition = "2021"
+description = "Terminal first-draft writer. Elfing: a complete terrible manuscript, then a second draft from scratch."
+license = "MIT"
+
+[[bin]]
+name = "elfy"
+path = "src/main.rs"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+tui-textarea = "0.7"
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+dirs = "5"
